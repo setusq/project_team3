@@ -7,3 +7,7 @@ CMD ["bash", "-c", " \
 airflow db init && \
 (airflow connections get 'source_db' || airflow connections add 'source_db' --conn-type 'postgres' --conn-host '10.82.0.4' --conn-schema 'source' --conn-login 'etl_user_3' --conn-password '(-`2loJV' --conn-port '5432') && \
 airflow webserver"]
+
+RUN apt-get update && \
+    apt-get install -y postgresql-client-16 && \
+    apt-get clean
