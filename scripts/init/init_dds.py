@@ -31,11 +31,11 @@ def execute_ddl_script(target_db, user, host, ddl_file, password):
         print(f"Ошибка при выполнении DDL скрипта: {e}")
 
 if __name__ == "__main__":
-    target_db = os.getenv('TARGET_DB', 'mila')
-    target_user = os.getenv('TARGET_USER', 'postgres')
+    target_db = os.getenv('TARGET_DB', 'etl_db_3')
+    target_user = os.getenv('TARGET_USER', 'etl_user_3')
 
-    target_host = os.getenv('TARGET_HOST', 'localhost')
-    target_password = os.getenv('TARGET_PASSWORD', '123')  
+    target_host = os.getenv('TARGET_HOST', '10.82.0.4')
+    target_password = os.getenv('TARGET_PASSWORD', '(-`2loJV')  
     
     ddl_file = "scripts/sql-scripts/dds_shema.sql"
 
