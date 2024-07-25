@@ -2,4 +2,4 @@
 .gitattributes
 .venv
 .env
-/opt/airflow/logs/
+logs
