@@ -1,1 +1,0 @@
-[2024-07-20T19:29:32.792+0000] {scheduler_job_runner.py:769} ERROR - Executor reports task instance <TaskInstance: refresh_ods.cleanup_target_schema manual__2024-07-20T19:24:24.429453+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
