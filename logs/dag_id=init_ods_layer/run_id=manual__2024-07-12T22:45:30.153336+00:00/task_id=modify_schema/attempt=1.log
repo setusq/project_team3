@@ -1,0 +1,21 @@
+[2024-07-12T22:45:44.562+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-12T22:45:44.573+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: init_ods_layer.modify_schema manual__2024-07-12T22:45:30.153336+00:00 [queued]>
+[2024-07-12T22:45:44.577+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: init_ods_layer.modify_schema manual__2024-07-12T22:45:30.153336+00:00 [queued]>
+[2024-07-12T22:45:44.577+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-12T22:45:44.582+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): modify_schema> on 2024-07-12 22:45:30.153336+00:00
+[2024-07-12T22:45:44.590+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=1270) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-12T22:45:44.591+0000] {standard_task_runner.py:63} INFO - Started process 1272 to run task
+[2024-07-12T22:45:44.591+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'init_ods_layer', 'modify_schema', 'manual__2024-07-12T22:45:30.153336+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/init_ods.py', '--cfg-path', '/tmp/tmp5sltax7j']
+[2024-07-12T22:45:44.593+0000] {standard_task_runner.py:91} INFO - Job 111: Subtask modify_schema
+[2024-07-12T22:45:44.624+0000] {task_command.py:426} INFO - Running <TaskInstance: init_ods_layer.modify_schema manual__2024-07-12T22:45:30.153336+00:00 [running]> on host 861c3600257c
+[2024-07-12T22:45:44.660+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='init_ods_layer' AIRFLOW_CTX_TASK_ID='modify_schema' AIRFLOW_CTX_EXECUTION_DATE='2024-07-12T22:45:30.153336+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-12T22:45:30.153336+00:00'
+[2024-07-12T22:45:44.662+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-12T22:45:44.690+0000] {logging_mixin.py:188} INFO - Имя схемы успешно изменено с source_data на ods_data_test в файле dags/scripts/sql-scripts/ods_migration.sql.
+[2024-07-12T22:45:44.691+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-07-12T22:45:44.691+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-12T22:45:44.700+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=init_ods_layer, task_id=modify_schema, run_id=manual__2024-07-12T22:45:30.153336+00:00, execution_date=20240712T224530, start_date=20240712T224544, end_date=20240712T224544
+[2024-07-12T22:45:44.733+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-12T22:45:44.813+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-12T22:45:44.816+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,51 @@
+[2024-07-17T10:14:13.308+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-17T10:14:13.328+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: update_ods_data_from_source.update_all_tables scheduled__2024-07-16T00:00:00+00:00 [queued]>
+[2024-07-17T10:14:13.333+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: update_ods_data_from_source.update_all_tables scheduled__2024-07-16T00:00:00+00:00 [queued]>
+[2024-07-17T10:14:13.334+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-17T10:14:13.341+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): update_all_tables> on 2024-07-16 00:00:00+00:00
+[2024-07-17T10:14:13.354+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=137) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-17T10:14:13.355+0000] {standard_task_runner.py:63} INFO - Started process 139 to run task
+[2024-07-17T10:14:13.355+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'update_ods_data_from_source', 'update_all_tables', 'scheduled__2024-07-16T00:00:00+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/update_ods.py', '--cfg-path', '/tmp/tmpvm2a_s09']
+[2024-07-17T10:14:13.357+0000] {standard_task_runner.py:91} INFO - Job 124: Subtask update_all_tables
+[2024-07-17T10:14:13.414+0000] {task_command.py:426} INFO - Running <TaskInstance: update_ods_data_from_source.update_all_tables scheduled__2024-07-16T00:00:00+00:00 [running]> on host 70110a06f087
+[2024-07-17T10:14:13.458+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='update_ods_data_from_source' AIRFLOW_CTX_TASK_ID='update_all_tables' AIRFLOW_CTX_EXECUTION_DATE='2024-07-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-16T00:00:00+00:00'
+[2024-07-17T10:14:13.462+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-17T10:14:13.470+0000] {base.py:84} INFO - Using connection ID 'source_db' for task execution.
+[2024-07-17T10:14:13.664+0000] {base.py:84} INFO - Using connection ID 'source_db' for task execution.
+[2024-07-17T10:14:13.783+0000] {base.py:84} INFO - Using connection ID 'target_db' for task execution.
+[2024-07-17T10:14:14.115+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-17T10:14:14.116+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/update_ods.py", line 89, in run_update
+    update_table(table)
+  File "/opt/airflow/dags/update_ods.py", line 75, in update_table
+    ods_cursor.executemany(insert_sql, rows)
+psycopg2.errors.SyntaxError: ОШИБКА:  ошибка синтаксиса (примерное положение: ",")
+LINE 2: ...ds_data.уровни_знаний (название, активность, Сорт., Дата изм...
+                                                             ^
+
+[2024-07-17T10:14:14.126+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=update_ods_data_from_source, task_id=update_all_tables, run_id=scheduled__2024-07-16T00:00:00+00:00, execution_date=20240716T000000, start_date=20240717T101413, end_date=20240717T101414
+[2024-07-17T10:14:14.136+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 124 for task update_all_tables (ОШИБКА:  ошибка синтаксиса (примерное положение: ",")
+LINE 2: ...ds_data.уровни_знаний (название, активность, Сорт., Дата изм...
+                                                             ^
+; 139)
+[2024-07-17T10:14:14.166+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-17T10:14:14.177+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-17T10:14:14.177+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

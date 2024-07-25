@@ -1,0 +1,40 @@
+[2024-07-20T21:44:54.423+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-20T21:44:54.436+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: refresh_ods.restore_dump manual__2024-07-20T21:39:35.179964+00:00 [queued]>
+[2024-07-20T21:44:54.440+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: refresh_ods.restore_dump manual__2024-07-20T21:39:35.179964+00:00 [queued]>
+[2024-07-20T21:44:54.441+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2024-07-20T21:44:54.446+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): restore_dump> on 2024-07-20 21:39:35.179964+00:00
+[2024-07-20T21:44:54.451+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=3432) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-20T21:44:54.452+0000] {standard_task_runner.py:63} INFO - Started process 3434 to run task
+[2024-07-20T21:44:54.452+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'refresh_ods', 'restore_dump', 'manual__2024-07-20T21:39:35.179964+00:00', '--job-id', '272', '--raw', '--subdir', 'DAGS_FOLDER/refresh_ods.py', '--cfg-path', '/tmp/tmp69bj65ji']
+[2024-07-20T21:44:54.454+0000] {standard_task_runner.py:91} INFO - Job 272: Subtask restore_dump
+[2024-07-20T21:44:54.505+0000] {task_command.py:426} INFO - Running <TaskInstance: refresh_ods.restore_dump manual__2024-07-20T21:39:35.179964+00:00 [running]> on host 89202c950a25
+[2024-07-20T21:44:54.549+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='refresh_ods' AIRFLOW_CTX_TASK_ID='restore_dump' AIRFLOW_CTX_EXECUTION_DATE='2024-07-20T21:39:35.179964+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-20T21:39:35.179964+00:00'
+[2024-07-20T21:44:54.551+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-20T21:44:54.559+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-20T21:44:54.560+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', "PGPASSWORD='***' psql -h 10.82.0.4 -U etl_user_3 -d etl_db_3 --clean -v -n ods_data /opt/***/dags/scripts/sql-scripts/ods_refresh.sql"]
+[2024-07-20T21:44:54.566+0000] {subprocess.py:86} INFO - Output:
+[2024-07-20T21:44:54.630+0000] {subprocess.py:93} INFO - /usr/lib/postgresql/16/bin/psql: unrecognized option '--clean'
+[2024-07-20T21:44:54.631+0000] {subprocess.py:93} INFO - psql: hint: Try "psql --help" for more information.
+[2024-07-20T21:44:54.633+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2024-07-20T21:44:54.633+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-20T21:44:54.646+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2024-07-20T21:44:54.651+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=refresh_ods, task_id=restore_dump, run_id=manual__2024-07-20T21:39:35.179964+00:00, execution_date=20240720T213935, start_date=20240720T214454, end_date=20240720T214454
+[2024-07-20T21:44:54.661+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 272 for task restore_dump (Bash command failed. The command returned a non-zero exit code 1.; 3434)
+[2024-07-20T21:44:54.682+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-20T21:44:54.691+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-20T21:44:54.692+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

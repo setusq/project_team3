@@ -1,0 +1,91 @@
+[2024-07-17T10:47:26.267+0000] {processor.py:161} INFO - Started process (PID=4838) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:47:26.267+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:47:26.268+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:47:26.268+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:47:26.302+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:47:26.370+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:47:26.370+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:47:26.377+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:47:26.377+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:47:26.394+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.135 seconds
+[2024-07-17T10:47:56.500+0000] {processor.py:161} INFO - Started process (PID=4899) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:47:56.501+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:47:56.503+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:47:56.502+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:47:56.560+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:47:56.579+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:47:56.579+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:47:56.588+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:47:56.588+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:47:56.596+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.106 seconds
+[2024-07-17T10:48:26.982+0000] {processor.py:161} INFO - Started process (PID=4960) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:48:26.983+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:48:26.983+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:48:26.983+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:48:27.013+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:48:27.043+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:48:27.043+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:48:27.059+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:48:27.058+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:48:27.067+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.091 seconds
+[2024-07-17T10:48:57.167+0000] {processor.py:161} INFO - Started process (PID=5021) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:48:57.168+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:48:57.168+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:48:57.168+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:48:57.194+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:48:57.209+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:48:57.209+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:48:57.217+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:48:57.217+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:48:57.225+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.065 seconds
+[2024-07-17T10:49:27.614+0000] {processor.py:161} INFO - Started process (PID=5083) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:49:27.616+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:49:27.618+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:49:27.617+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:49:27.662+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:49:27.676+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:49:27.676+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:49:27.682+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:49:27.682+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:49:27.689+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.088 seconds
+[2024-07-17T10:49:58.436+0000] {processor.py:161} INFO - Started process (PID=5143) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:49:58.438+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:49:58.441+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:49:58.439+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:49:58.481+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:49:58.500+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:49:58.499+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:49:58.507+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:49:58.507+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:49:58.514+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.093 seconds
+[2024-07-17T10:50:29.099+0000] {processor.py:161} INFO - Started process (PID=5204) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:50:29.101+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:50:29.102+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:50:29.101+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:50:29.155+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:50:29.174+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:50:29.173+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:50:29.181+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:50:29.181+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:50:29.188+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.098 seconds
+[2024-07-17T10:50:59.545+0000] {processor.py:161} INFO - Started process (PID=5265) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:50:59.547+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:50:59.548+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:50:59.547+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:50:59.566+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:50:59.578+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:50:59.578+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:50:59.584+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:50:59.584+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:50:59.591+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.053 seconds
+[2024-07-17T10:51:30.162+0000] {processor.py:161} INFO - Started process (PID=5326) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:51:30.164+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:51:30.165+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:51:30.165+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:51:30.195+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:51:30.211+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:51:30.211+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:51:30.217+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:51:30.217+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:51:30.223+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.070 seconds
+[2024-07-17T10:52:00.721+0000] {processor.py:161} INFO - Started process (PID=5387) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:52:00.723+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:52:00.724+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:52:00.724+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:52:00.746+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:52:00.759+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:52:00.758+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:52:00.764+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:52:00.764+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:52:00.770+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.056 seconds
+[2024-07-17T10:52:31.292+0000] {processor.py:161} INFO - Started process (PID=5447) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:52:31.293+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:52:31.294+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:52:31.293+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:52:31.330+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:52:31.351+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:52:31.351+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:52:31.359+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:52:31.359+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:52:31.366+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.081 seconds
+[2024-07-17T10:53:01.463+0000] {processor.py:161} INFO - Started process (PID=5508) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:53:01.463+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:53:01.464+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:53:01.464+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:53:01.494+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:53:01.504+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:53:01.504+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:53:01.509+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:53:01.509+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:53:01.517+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.061 seconds
+[2024-07-17T10:53:19.869+0000] {processor.py:161} INFO - Started process (PID=5559) to work on /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:53:19.869+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/refresh_ods.py for tasks to queue
+[2024-07-17T10:53:19.870+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:53:19.870+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:53:19.890+0000] {processor.py:840} INFO - DAG(s) 'refresh_ods_layer' retrieved from /opt/airflow/dags/refresh_ods.py
+[2024-07-17T10:53:19.903+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:53:19.903+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-07-17T10:53:19.909+0000] {logging_mixin.py:188} INFO - [2024-07-17T10:53:19.909+0000] {dag.py:3954} INFO - Setting next_dagrun for refresh_ods_layer to None, run_after=None
+[2024-07-17T10:53:19.916+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/refresh_ods.py took 0.057 seconds

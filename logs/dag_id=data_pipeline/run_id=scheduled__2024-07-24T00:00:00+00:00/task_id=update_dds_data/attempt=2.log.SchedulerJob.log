@@ -1,0 +1,1 @@
+[2024-07-25T11:18:44.465+0000] {scheduler_job_runner.py:769} ERROR - Executor reports task instance <TaskInstance: data_pipeline.update_dds_data scheduled__2024-07-24T00:00:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

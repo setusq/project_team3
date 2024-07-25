@@ -1,19 +1,3 @@
-# FROM apache/airflow:2.9.2
-
-# USER airflow
-# RUN pip install psycopg2-binary
-# ENTRYPOINT ["/entrypoint"]
-# CMD ["bash", "-c", " \
-# airflow db init && \
-# (airflow connections get 'source_db' || airflow connections add 'source_db' --conn-type 'postgres' --conn-host '10.82.0.4' --conn-schema 'source' --conn-login 'etl_user_3' --conn-password '(-`2loJV' --conn-port '5432') && \
-# airflow webserver"]
-
-# RUN apt-get update --no-cache  && \
-#     apt-get install -y postgresql-client-16 && \
-#     apt-get clean
-
-
-
 # Use the official Apache Airflow image
 FROM apache/airflow:2.9.2
 
@@ -21,7 +5,10 @@ FROM apache/airflow:2.9.2
 USER airflow
 
 # Install psycopg2-binary
-RUN pip install psycopg2-binary
+COPY requirements.txt /opt/app/requirements.txt
+WORKDIR /opt/app
+RUN pip install -r requirements.txt
+COPY . /opt/app
 
 # Switch to root user to perform system-level operations
 USER root
@@ -34,6 +21,8 @@ RUN apt-get update && \
 
 # Switch back to the airflow user
 USER airflow
+
+ENV PYTHONPATH="${PYTHONPATH}:/opt/airflow/scripts"
 
 # Set entrypoint and default command
 ENTRYPOINT ["/entrypoint"]

@@ -1,0 +1,133 @@
+[2024-07-21T08:41:56.055+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-21T08:41:56.064+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: refresh_ods.print_dump manual__2024-07-21T08:41:45.415025+00:00 [queued]>
+[2024-07-21T08:41:56.066+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: refresh_ods.print_dump manual__2024-07-21T08:41:45.415025+00:00 [queued]>
+[2024-07-21T08:41:56.066+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-21T08:41:56.071+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): print_dump> on 2024-07-21 08:41:45.415025+00:00
+[2024-07-21T08:41:56.075+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=5766) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-21T08:41:56.076+0000] {standard_task_runner.py:63} INFO - Started process 5768 to run task
+[2024-07-21T08:41:56.076+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'refresh_ods', 'print_dump', 'manual__2024-07-21T08:41:45.415025+00:00', '--job-id', '340', '--raw', '--subdir', 'DAGS_FOLDER/refresh_ods.py', '--cfg-path', '/tmp/tmpuurmr3qv']
+[2024-07-21T08:41:56.078+0000] {standard_task_runner.py:91} INFO - Job 340: Subtask print_dump
+[2024-07-21T08:41:56.099+0000] {task_command.py:426} INFO - Running <TaskInstance: refresh_ods.print_dump manual__2024-07-21T08:41:45.415025+00:00 [running]> on host 89202c950a25
+[2024-07-21T08:41:56.142+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='refresh_ods' AIRFLOW_CTX_TASK_ID='print_dump' AIRFLOW_CTX_EXECUTION_DATE='2024-07-21T08:41:45.415025+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-21T08:41:45.415025+00:00'
+[2024-07-21T08:41:56.143+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-21T08:41:56.144+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-21T08:41:56.145+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'pg_restore -l /opt/***/dags/scripts/sql-scripts/ods_refresh.dump']
+[2024-07-21T08:41:56.149+0000] {subprocess.py:86} INFO - Output:
+[2024-07-21T08:41:56.172+0000] {subprocess.py:93} INFO - ;
+[2024-07-21T08:41:56.172+0000] {subprocess.py:93} INFO - ; Archive created at 2024-07-21 08:41:50 UTC
+[2024-07-21T08:41:56.172+0000] {subprocess.py:93} INFO - ;     dbname: source
+[2024-07-21T08:41:56.172+0000] {subprocess.py:93} INFO - ;     TOC Entries: 99
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ;     Compression: gzip
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ;     Dump Version: 1.15-0
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ;     Format: CUSTOM
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ;     Integer: 4 bytes
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ;     Offset: 8 bytes
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ;     Dumped from database version: 11.13
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ;     Dumped by pg_dump version: 16.3 (Debian 16.3-1.pgdg120+1)
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ;
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ;
+[2024-07-21T08:41:56.173+0000] {subprocess.py:93} INFO - ; Selected TOC Entries:
+[2024-07-21T08:41:56.174+0000] {subprocess.py:93} INFO - ;
+[2024-07-21T08:41:56.174+0000] {subprocess.py:93} INFO - 8; 2615 1216330 SCHEMA - source_data pkhlopotin
+[2024-07-21T08:41:56.174+0000] {subprocess.py:93} INFO - 3852; 0 0 ACL - SCHEMA source_data pkhlopotin
+[2024-07-21T08:41:56.174+0000] {subprocess.py:93} INFO - 199; 1259 1216348 TABLE source_data базы_данных pkhlopotin
+[2024-07-21T08:41:56.174+0000] {subprocess.py:93} INFO - 3853; 0 0 ACL source_data TABLE "базы_данных" pkhlopotin
+[2024-07-21T08:41:56.174+0000] {subprocess.py:93} INFO - 200; 1259 1216354 TABLE source_data базы_данных_и_уровень_знаний_сотру pkhlopotin
+[2024-07-21T08:41:56.174+0000] {subprocess.py:93} INFO - 3854; 0 0 ACL source_data TABLE "базы_данных_и_уровень_знаний_сотру" pkhlopotin
+[2024-07-21T08:41:56.174+0000] {subprocess.py:93} INFO - 203; 1259 1216377 TABLE source_data инструменты pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 3855; 0 0 ACL source_data TABLE "инструменты" pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 202; 1259 1216374 TABLE source_data инструменты_и_уровень_знаний_сотр pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 3856; 0 0 ACL source_data TABLE "инструменты_и_уровень_знаний_сотр" pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 229; 1259 1224502 TABLE source_data образование_пользователей pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 3857; 0 0 ACL source_data TABLE "образование_пользователей" pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 204; 1259 1216386 TABLE source_data опыт_сотрудника_в_отраслях pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 3858; 0 0 ACL source_data TABLE "опыт_сотрудника_в_отраслях" pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 209; 1259 1216520 TABLE source_data опыт_сотрудника_в_предметных_обла pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 3859; 0 0 ACL source_data TABLE "опыт_сотрудника_в_предметных_обла" pkhlopotin
+[2024-07-21T08:41:56.175+0000] {subprocess.py:93} INFO - 201; 1259 1216362 TABLE source_data отрасли pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 3860; 0 0 ACL source_data TABLE "отрасли" pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 206; 1259 1216401 TABLE source_data платформы pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 3861; 0 0 ACL source_data TABLE "платформы" pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 205; 1259 1216396 TABLE source_data платформы_и_уровень_знаний_сотруд pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 3862; 0 0 ACL source_data TABLE "платформы_и_уровень_знаний_сотруд" pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 207; 1259 1216404 TABLE source_data предметная_область pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 3863; 0 0 ACL source_data TABLE "предметная_область" pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 210; 1259 1216539 TABLE source_data резюмедар pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 3864; 0 0 ACL source_data TABLE "резюмедар" pkhlopotin
+[2024-07-21T08:41:56.176+0000] {subprocess.py:93} INFO - 211; 1259 1216558 TABLE source_data сертификаты_пользователей pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 3865; 0 0 ACL source_data TABLE "сертификаты_пользователей" pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 212; 1259 1217456 TABLE source_data сотрудники_дар pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 3866; 0 0 ACL source_data TABLE "сотрудники_дар" pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 213; 1259 1217467 TABLE source_data среды_разработки pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 3867; 0 0 ACL source_data TABLE "среды_разработки" pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 208; 1259 1216443 TABLE source_data среды_разработки_и_уровень_знаний_ pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 3868; 0 0 ACL source_data TABLE "среды_разработки_и_уровень_знаний_" pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 215; 1259 1217487 TABLE source_data технологии pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 3869; 0 0 ACL source_data TABLE "технологии" pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 214; 1259 1217479 TABLE source_data технологии_и_уровень_знаний_сотру pkhlopotin
+[2024-07-21T08:41:56.177+0000] {subprocess.py:93} INFO - 3870; 0 0 ACL source_data TABLE "технологии_и_уровень_знаний_сотру" pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 216; 1259 1217493 TABLE source_data типы_систем pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 3871; 0 0 ACL source_data TABLE "типы_систем" pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 225; 1259 1217549 TABLE source_data типы_систем_и_уровень_знаний_сотру pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 3872; 0 0 ACL source_data TABLE "типы_систем_и_уровень_знаний_сотру" pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 217; 1259 1217499 TABLE source_data уровень_образования pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 3873; 0 0 ACL source_data TABLE "уровень_образования" pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 218; 1259 1217505 TABLE source_data уровни_владения_ин pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 3874; 0 0 ACL source_data TABLE "уровни_владения_ин" pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 220; 1259 1217517 TABLE source_data уровни_знаний pkhlopotin
+[2024-07-21T08:41:56.178+0000] {subprocess.py:93} INFO - 3875; 0 0 ACL source_data TABLE "уровни_знаний" pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 219; 1259 1217511 TABLE source_data уровни_знаний_в_отрасли pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 3876; 0 0 ACL source_data TABLE "уровни_знаний_в_отрасли" pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 226; 1259 1217552 TABLE source_data уровни_знаний_в_предметной_област pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 3877; 0 0 ACL source_data TABLE "уровни_знаний_в_предметной_област" pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 221; 1259 1217523 TABLE source_data фреймворки pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 3878; 0 0 ACL source_data TABLE "фреймворки" pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 227; 1259 1217560 TABLE source_data фреймворки_и_уровень_знаний_сотру pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 3879; 0 0 ACL source_data TABLE "фреймворки_и_уровень_знаний_сотру" pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 224; 1259 1217541 TABLE source_data языки pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 3880; 0 0 ACL source_data TABLE "языки" pkhlopotin
+[2024-07-21T08:41:56.179+0000] {subprocess.py:93} INFO - 222; 1259 1217529 TABLE source_data языки_пользователей pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3881; 0 0 ACL source_data TABLE "языки_пользователей" pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 223; 1259 1217535 TABLE source_data языки_программирования pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3882; 0 0 ACL source_data TABLE "языки_программирования" pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 228; 1259 1217566 TABLE source_data языки_программирования_и_уровень pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3883; 0 0 ACL source_data TABLE "языки_программирования_и_уровень" pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3815; 0 1216348 TABLE DATA source_data базы_данных pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3816; 0 1216354 TABLE DATA source_data базы_данных_и_уровень_знаний_сотру pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3819; 0 1216377 TABLE DATA source_data инструменты pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3818; 0 1216374 TABLE DATA source_data инструменты_и_уровень_знаний_сотр pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3845; 0 1224502 TABLE DATA source_data образование_пользователей pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3820; 0 1216386 TABLE DATA source_data опыт_сотрудника_в_отраслях pkhlopotin
+[2024-07-21T08:41:56.180+0000] {subprocess.py:93} INFO - 3825; 0 1216520 TABLE DATA source_data опыт_сотрудника_в_предметных_обла pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3817; 0 1216362 TABLE DATA source_data отрасли pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3822; 0 1216401 TABLE DATA source_data платформы pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3821; 0 1216396 TABLE DATA source_data платформы_и_уровень_знаний_сотруд pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3823; 0 1216404 TABLE DATA source_data предметная_область pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3826; 0 1216539 TABLE DATA source_data резюмедар pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3827; 0 1216558 TABLE DATA source_data сертификаты_пользователей pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3828; 0 1217456 TABLE DATA source_data сотрудники_дар pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3829; 0 1217467 TABLE DATA source_data среды_разработки pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3824; 0 1216443 TABLE DATA source_data среды_разработки_и_уровень_знаний_ pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3831; 0 1217487 TABLE DATA source_data технологии pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3830; 0 1217479 TABLE DATA source_data технологии_и_уровень_знаний_сотру pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3832; 0 1217493 TABLE DATA source_data типы_систем pkhlopotin
+[2024-07-21T08:41:56.181+0000] {subprocess.py:93} INFO - 3841; 0 1217549 TABLE DATA source_data типы_систем_и_уровень_знаний_сотру pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3833; 0 1217499 TABLE DATA source_data уровень_образования pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3834; 0 1217505 TABLE DATA source_data уровни_владения_ин pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3836; 0 1217517 TABLE DATA source_data уровни_знаний pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3835; 0 1217511 TABLE DATA source_data уровни_знаний_в_отрасли pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3842; 0 1217552 TABLE DATA source_data уровни_знаний_в_предметной_област pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3837; 0 1217523 TABLE DATA source_data фреймворки pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3843; 0 1217560 TABLE DATA source_data фреймворки_и_уровень_знаний_сотру pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3840; 0 1217541 TABLE DATA source_data языки pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3838; 0 1217529 TABLE DATA source_data языки_пользователей pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3839; 0 1217535 TABLE DATA source_data языки_программирования pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:93} INFO - 3844; 0 1217566 TABLE DATA source_data языки_программирования_и_уровень pkhlopotin
+[2024-07-21T08:41:56.182+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-21T08:41:56.183+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-21T08:41:56.191+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=refresh_ods, task_id=print_dump, run_id=manual__2024-07-21T08:41:45.415025+00:00, execution_date=20240721T084145, start_date=20240721T084156, end_date=20240721T084156
+[2024-07-21T08:41:56.224+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-21T08:41:56.248+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-21T08:41:56.249+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

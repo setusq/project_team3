@@ -1,0 +1,42 @@
+[2024-07-20T20:18:09.279+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-20T20:18:09.297+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: refresh_ods.cleanup_target_schema manual__2024-07-20T20:18:06.178746+00:00 [queued]>
+[2024-07-20T20:18:09.300+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: refresh_ods.cleanup_target_schema manual__2024-07-20T20:18:06.178746+00:00 [queued]>
+[2024-07-20T20:18:09.301+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-07-20T20:18:09.308+0000] {taskinstance.py:2330} INFO - Executing <Task(PostgresOperator): cleanup_target_schema> on 2024-07-20 20:18:06.178746+00:00
+[2024-07-20T20:18:09.313+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=2335) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-07-20T20:18:09.320+0000] {standard_task_runner.py:63} INFO - Started process 2337 to run task
+[2024-07-20T20:18:09.317+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'refresh_ods', 'cleanup_target_schema', 'manual__2024-07-20T20:18:06.178746+00:00', '--job-id', '210', '--raw', '--subdir', 'DAGS_FOLDER/refresh_ods.py', '--cfg-path', '/tmp/tmpirix9qac']
+[2024-07-20T20:18:09.322+0000] {standard_task_runner.py:91} INFO - Job 210: Subtask cleanup_target_schema
+[2024-07-20T20:18:09.388+0000] {task_command.py:426} INFO - Running <TaskInstance: refresh_ods.cleanup_target_schema manual__2024-07-20T20:18:06.178746+00:00 [running]> on host 89202c950a25
+[2024-07-20T20:18:09.440+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='refresh_ods' AIRFLOW_CTX_TASK_ID='cleanup_target_schema' AIRFLOW_CTX_EXECUTION_DATE='2024-07-20T20:18:06.178746+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-20T20:18:06.178746+00:00'
+[2024-07-20T20:18:09.441+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-20T20:18:09.441+0000] {sql.py:276} INFO - Executing: 
+        DO $$ DECLARE
+            r RECORD;
+        BEGIN
+            FOR r IN (SELECT tablename FROM pg_tables WHERE schemaname = 'ods_data') LOOP
+                EXECUTE 'DROP TABLE ods_data.' || quote_ident(r.tablename) || ' CASCADE';
+            END LOOP;
+        END $$;
+    
+[2024-07-20T20:18:09.446+0000] {base.py:84} INFO - Using connection ID 'target_db' for task execution.
+[2024-07-20T20:18:09.451+0000] {base.py:84} INFO - Using connection ID 'target_db' for task execution.
+[2024-07-20T20:18:09.570+0000] {sql.py:487} INFO - Running statement: 
+        DO $$ DECLARE
+            r RECORD;
+        BEGIN
+            FOR r IN (SELECT tablename FROM pg_tables WHERE schemaname = 'ods_data') LOOP
+                EXECUTE 'DROP TABLE ods_data.' || quote_ident(r.tablename) || ' CASCADE';
+            END LOOP;
+        END $$;
+    , parameters: None
+[2024-07-20T20:18:09.656+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-20T20:18:09.666+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=refresh_ods, task_id=cleanup_target_schema, run_id=manual__2024-07-20T20:18:06.178746+00:00, execution_date=20240720T201806, start_date=20240720T201809, end_date=20240720T201809
+[2024-07-20T20:18:09.714+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-07-20T20:18:09.748+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1297: AirflowProviderDeprecationWarning: Call to deprecated class PostgresOperator. (Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`.Also, you can provide `hook_params={'schema': <database>}`.)
+  result = cls.__new__(cls)
+
+[2024-07-20T20:18:09.771+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-07-20T20:18:09.774+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
