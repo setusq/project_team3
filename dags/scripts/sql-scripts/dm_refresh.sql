@@ -40,7 +40,7 @@ WITH new_data AS (
     WHERE name <> 'Другое' AND last_update > (SELECT MAX(last_update) FROM dm_data.skills)
     UNION ALL
     SELECT id, name, last_update FROM dds_data.d_platforms
-    WHERE name <> 'Другое' AND last_update > (SELECT MAX(last_update) FROM dm_data.skills)
+    WHERE name <> 'Другое' AND name <> 'MS SQL Server' AND name <> 'Oracle' AND last_update > (SELECT MAX(last_update) FROM dm_data.skills)
     UNION ALL
     SELECT id, name, last_update FROM dds_data.d_ide
     WHERE name <> 'Другое' AND last_update > (SELECT MAX(last_update) FROM dm_data.skills)
@@ -178,8 +178,12 @@ BEGIN
                 user_id, 
                 j.id AS job_title_id, 
                 d.id AS department_id, 
-                3 AS skill_type_id, 
-                platform_id AS skill_id, 
+                case when platform_id = 239039 or platform_id = 115671 then 1 else 3 end AS skill_type_id, 
+                case 
+			        when platform_id = 239039 then 115696 
+			        when platform_id = 115671 then 115699
+			        else platform_id
+		        end AS skill_id,  
                 knowledge_id AS skill_level_id, 
                 date
             FROM dds_data.employee_platform_skills s

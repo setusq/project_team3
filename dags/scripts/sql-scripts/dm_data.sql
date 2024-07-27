@@ -142,13 +142,13 @@ order by job_title;
 -- навыки 
 insert into dm_data.skills
 select id, name, current_date from dds_data.d_databases
-	where name <> 'Другое'
+	where name <> 'Другое' 
 union all
 select id, name, current_date from dds_data.d_tools
 	where name <> 'Другое'
 union all
 select id, name, current_date from dds_data.d_platforms
-	where name <> 'Другое'
+	where name <> 'Другое' and name <> 'MS SQL Server' and name <> 'Oracle'
 union all
 select id, name, current_date from dds_data.d_ide
 	where name <> 'Другое'
@@ -211,8 +211,12 @@ WITH skill_data AS (
         user_id, 
         j.id AS job_title_id, 
         d.id AS department_id, 
-        3 AS skill_type_id, 
-        platform_id AS skill_id, 
+        case when platform_id = 239039 or platform_id = 115671 then 1 else 3 end AS skill_type_id, 
+        case 
+			when platform_id = 239039 then 115696 
+			when platform_id = 115671 then 115699
+			else platform_id
+		end AS skill_id, 
         knowledge_id AS skill_level_id, 
         date
     FROM dds_data.employee_platform_skills s
