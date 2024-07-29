@@ -169,12 +169,12 @@ where name <> 'Другое';
 INSERT INTO dm_data.skill_levels
 SELECT id, name,
     CASE
-        WHEN name = 'Использовал на проекте' THEN 1
-        WHEN name = 'Novice' THEN 2
-        WHEN name = 'Junior' THEN 3
-        WHEN name = 'Middle' THEN 4
-        WHEN name = 'Senior' THEN 5
-        WHEN name = 'Expert' THEN 6
+        WHEN name = 'Использовал на проекте' THEN 0
+        WHEN name = 'Novice' THEN 1
+        WHEN name = 'Junior' THEN 2
+        WHEN name = 'Middle' THEN 3
+        WHEN name = 'Senior' THEN 4
+        WHEN name = 'Expert' THEN 5
     END,
     current_date
 FROM dds_data.d_knowledge_levels;
