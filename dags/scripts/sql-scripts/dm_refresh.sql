@@ -45,7 +45,7 @@ WITH new_data AS (
     SELECT id, name, last_update FROM dds_data.d_ide
     WHERE name <> 'Другое' AND last_update > (SELECT MAX(last_update) FROM dm_data.skills)
     UNION ALL
-    SELECT id, name, last_update FROM dds_data.d_subjects
+    SELECT id, name, last_update FROM dds_data.d_system_types
     WHERE name <> 'Другое' AND last_update > (SELECT MAX(last_update) FROM dm_data.skills)
     UNION ALL
     SELECT id, name, last_update FROM dds_data.d_technologies

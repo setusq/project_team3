@@ -153,7 +153,7 @@ union all
 select id, name, current_date from dds_data.d_ide
 	where name <> 'Другое'
 union all
-select id, name, current_date from dds_data.d_subjects
+select id, name, current_date from dds_data.d_system_types
 	where name <> 'Другое'
 union all
 select id, name, current_date from dds_data.d_technologies
